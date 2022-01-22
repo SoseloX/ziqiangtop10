@@ -1,16 +1,17 @@
 <template>
   <div id="app">
+    <Whu_logo/>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-
+import Whu_logo from './components/Whu_logo'
 
 export default {
   name: 'App',
   components: {
-    
+    Whu_logo
   }
 }
 </script>

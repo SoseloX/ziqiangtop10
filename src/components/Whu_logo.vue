@@ -1,5 +1,5 @@
 <template>
-    
+     <img src="../assets/whu.png" alt="" id='whu'>
 </template>
 
 <script>

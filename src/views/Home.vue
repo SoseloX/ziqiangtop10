@@ -2,7 +2,7 @@
     <div id="contanier">
         <div id='year'>2021</div>
         <img src="../assets/home_text.png" alt="" id='home_text'>
-        <img src="../assets/whu.png" alt="" id='whu'>
+       
         <img src="../assets/big_cloud.png" alt="" class="big_cloud" id='left_big'>
         <img src="../assets/big_cloud.png" alt="" class="big_cloud" id='right_big'>
         <div id='four'>东滨有山|山上有黉|风云变幻|学子无双 <br>乾坤转动|大潮滂滂|斗转星移|群英堂堂</div>
@@ -18,6 +18,9 @@
         </router-link>
         <img src="../assets/small_cloud.png" alt="" class="small_cloud" id='left_small'>
         <img src="../assets/small_cloud.png" alt="" class="small_cloud" id='right_small'>
+        <div id='identity'>
+            Copyright@ziqiang.studio 2017
+        </div>
     </div>
 </template>
 
@@ -180,5 +183,17 @@ export default{
       top: 73%;
       right: 29.93%;
       transform: rotateY(180deg);
+  }
+  #identity{
+      position: absolute;
+    width: 14.75%;
+    height: 4.26%;
+    font-family: Segoe UI;
+    font-weight: 400;
+    line-height: 25px;
+    color: #F9F9F9;
+    opacity: 1;
+    right: 1%;
+    bottom: 2%;
   }
 </style>
