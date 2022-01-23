@@ -43,7 +43,7 @@ export default{
       position: static;
     height: 100%;
     width: 100%;
-    background:url("../assets/half_background.png") no-repeat center center;
+    background:url("../assets/blur_background.png") no-repeat center center;
     background-attachment: fixed;
     background-size:cover;
   }
