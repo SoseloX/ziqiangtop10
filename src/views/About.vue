@@ -1,7 +1,34 @@
 <template>
     <div id='sub_contanier'>
-        <img src="../assets/big_cloud.png" id='about_big_cloud_left' class='about_big_cloud' alt="">
-        <img src="../assets/big_cloud.png" id='about_big_cloud_right' class='about_big_cloud' alt="">
+        <div id="mask" v-show="isMask" @click="dealAbout">
+            <div id='prop' v-show="isMask" @click="dealAbout">
+                <div id="prop_text" @click="dealAbout">
+                    <h2>候选人推荐阶段</h2> 3月25日-5月8日
+                    <br>
+                    <br>
+                    1.院（系）推荐。每个院（系）原则上推荐2名参选人（含团队）。
+                    <br>
+                    2.职能部门推荐。各职能部门原则上推荐2名参选人（含团队）。 
+                    <br>
+                    3.导师推荐。支持导师推荐所带优秀学生或团队参选。 
+                    <br>
+                    4.学生组织、学生社团推荐。各学生组织、学生社团可推荐1名参选人（含团队）参选。 
+                    <br>
+                    5.自荐。支持优秀学生和团队自荐报名。 
+                    <br>
+                    <br>
+                    各单位要充分考察，推荐优秀个人（团队）参加武汉大学2020年度十大珞珈风云学子评选活动， 并按要求及时上报材料。候选人材料提交完毕后，评选委员会将对候选人材料进行初审，并确 定40位入围候选人（含团队）。
+                </div>
+            </div>
+        </div>
+        <router-link id='back_button' to="./index">
+            <img src="../assets/back.png" alt="" id='back'>
+        </router-link>
+        <div class="about_head">
+            <img src="../assets/big_cloud.png" id='about_big_cloud_left' class='about_big_cloud' alt="">
+            <img src="../assets/rule.png" id='rule' alt="">
+            <img src="../assets/big_cloud.png" id='about_big_cloud_right' class='about_big_cloud' alt="">
+        </div>
         <div id='black_line'></div>
         <div class="dot" id='dot1'></div>
         <div class="dot" id='dot2'></div>
@@ -27,7 +54,7 @@
                 </div>
                 <div class="square_below_text" id='square_below_text1'>候选人推荐阶段</div>
                 <div class="info_box" id='info_box1'>
-                    <div class="info_text" id='info_text1'>查看</div>
+                    <div class="info_text" id='info_text1' @click="dealAbout">查看</div>
                 </div>
             </div>
             <div id="median2" class="sub_median">
@@ -36,7 +63,7 @@
                 </div>
                 <div class="square_below_text" id='square_below_text2'>初选阶段</div>
                 <div class="info_box" id='info_box2'>
-                    <div class="info_text" id='info_text2'>查看</div>
+                    <div class="info_text" id='info_text2' @click="dealAbout">查看</div>
                 </div>
             </div>
             <div id="median3" class="sub_median">
@@ -45,7 +72,7 @@
                 </div>
                 <div class="square_below_text" id='square_below_text3'>终选阶段</div>
                 <div class="info_box" id='info_box3'>
-                    <div class="info_text" id='info_text4'>查看</div>
+                    <div class="info_text" id='info_text4' @click="dealAbout">查看</div>
                 </div>
             </div>
             <div id="median4" class="sub_median">
@@ -54,20 +81,50 @@
                 </div>
                 <div class="square_below_text" id='square_below_text4'>结果公示</div>
                 <div class="info_box" id='info_box4'>
-                    <div class="info_text" id='info_text4'>查看</div>
+                    <div class="info_text" id='info_text4' @click="dealAbout">查看</div>
                 </div>
             </div>
+        </div>
+        <div class="bottom">
+            <img src="../assets/small_cloud.png" alt="" class="about_small_cloud" id='small_cloud_left'>
+            <router-link id="about_vote_box" to="./vote">
+                <div id="vote_text">
+                    我已了解,开始投票
+                </div>
+            </router-link>
+            <img src="../assets/small_cloud.png" alt="" class="about_small_cloud" id='small_cloud_right'>
         </div>
     </div>
 </template>
 
 <script>
 export default{
-    name:'About'
+    name:'About',
+    data: function(){
+        return {
+            isMask: false
+        }
+    },
+    methods:{
+        dealAbout:function(){
+            this.isMask = !this.isMask;
+        }
+    }
 }
 </script>
 
 <style>
+#back_button{
+    position: absolute;
+    left: 1%;
+    top:1%;
+    width: 113px;
+    height: 60px;
+}
+#back{
+    width: 90%;
+    height: 100%;
+}
 #sub_contanier{
     position: static;
     height: 100%;
@@ -75,6 +132,33 @@ export default{
     background:url("../assets/half_background.png") no-repeat center center;
     background-attachment: fixed;
     background-size:cover;
+}
+.about_head{
+    width: 60%;
+    height: 30%;
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#rule{
+    width: 434px;
+    height: 253px;
+    background: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+}
+.about_big_cloud{
+    width: 254px;
+    height: 141px;
+    background: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+}
+#about_big_cloud_left{
+    transform: rotateY(180deg);
 }
 #black_line{
     position: relative;
@@ -267,7 +351,7 @@ export default{
     transform: rotate(-45deg);
 }
 .square_below_text{
-    font-size: 2.3rem;
+    font-size: 2vw;
     font-family: FangSong;
     font-weight: 400;
     color: #000000;
@@ -284,6 +368,7 @@ export default{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer; 
 }
 .info_text{
     height: 100%;
@@ -292,67 +377,6 @@ export default{
     font-weight: 400;
     color: #000000;
     opacity: 1;
-}
-#square1{
-    /* position: absolute; */
-    /* top:46.85%;
-    left:18.20%; */
-    position: relative;
-}
-#square_below_text1{
-    /* position: absolute; */
-    /* left: 12.39%;
-    top:58.27%; */
-}
-#info_box1{
-    /* left:12.81%;
-    top:65.37%; */
-    /* position: absolute; */
-}
-#square2{
-    /* position: absolute; */
-    /* top:46.85%;
-    left:36.82%; */
-}
-#square_below_text2{
-    /* position: absolute; */
-    /* left: 35.31%;
-    top:58.27%; */
-}
-#info_box2{
-    /* left:32.35%;
-    top:65.37%; */
-    /* position: absolute; */
-}
-#square3{
-    /* position: absolute; */
-    /* top:46.85%;
-    left:56.25%; */
-}
-#square_below_text3{
-    /* position: absolute; */
-    /* left: 54.69%;
-    top:58.27%; */
-}
-#info_box3{
-    /* left:51.56%;
-    top:65.37%; */
-    /* position: absolute; */
-}
-#square4{
-    /* position: absolute; */
-    top:46.85%;
-    left:75.57%;
-}
-#square_below_text4{
-    /* position: absolute; */
-    left: 75.57%;
-    top:58.27%;
-}
-#info_box4{
-    left:70.88%;
-    top:65.37%;
-    /* position: absolute; */
 }
 .ver_line{
     width: 0px;
@@ -363,34 +387,89 @@ export default{
 }
 #ver_line1{
     top: 436px;
-    left: 572px;
+    left: 28%;
     position: absolute;
 }
 #ver_line2{
     top: 436px;
-    left: 958px;
+    left: 50%;
     position: absolute;
 }
 #ver_line3{
     top: 436px;
-    left: 1367px;
+    left: 72%;
     position: absolute;
 }
-.about_big_cloud{
-    width: 254px;
-    height: 141px;
-    background: rgba(0, 0, 0, 0);
+
+.bottom{
+    position: relative;
+    width: 60%;
+    height: 20%;
+    display: flex;
+    margin: 0 auto;
+    top: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.about_small_cloud{
+    width: 25%;
+    height: 50%;
+}
+#about_vote_box{
+    width: 40%;
+    height: 35%;
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #000000;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+#vote_text{
+    font-size: 2vw;
+    font-family: FangSong;
+    font-weight: 400;
+    line-height: 61px;
+    color: #000000;
     opacity: 1;
 }
-#about_big_cloud_left{
+#small_cloud_right{
     transform: rotateY(180deg);
-    position: absolute;
-    left: 485px;
-    top: 173px;
 }
-#about_big_cloud_right{
+
+#mask{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ z-index: 10;
+ background: rgba(240, 239, 239, 0.7);
+-webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(15px);
+}
+#prop{
+    width: 70%;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.39);
+    border: 1px solid #707070;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    opacity: 1;
+    border-radius: 86px;
     position: absolute;
-    left: 1160px;
-    top: 173px;
+    z-index: 20;
+    left: 15%;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#prop_text{
+    height: 80%;
+    width: 90%;
+    font-size: 30px;
+    font-family: FangSong;
+    font-weight: 400;
+    line-height: 36px;
+    color: #000000;
+    opacity: 1;
 }
 </style>
