@@ -1,7 +1,7 @@
 import VueRouter from "vue-router"
 // 引入组件
 import Home from '../views/Home'
-import Vote from '../views/Vote'
+import About from '../views/About'
 import Review from '../views/Review'
 
 // 创建并暴露一个路由器
@@ -16,8 +16,8 @@ const router = new VueRouter({
             component:Home
        },
        {
-           path:'/vote',
-           component:Vote
+           path:'/about',
+           component:About
        },
        {
            path:'/review',

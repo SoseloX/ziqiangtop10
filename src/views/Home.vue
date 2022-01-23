@@ -1,12 +1,11 @@
 <template>
     <div id="contanier">
         <div id='year'>2021</div>
-        <img src="../assets/home_text.png" alt="" id='home_text'>
-       
+        <img src="../assets/home_text.png" alt="" id='home_text'>       
         <img src="../assets/big_cloud.png" alt="" class="big_cloud" id='left_big'>
         <img src="../assets/big_cloud.png" alt="" class="big_cloud" id='right_big'>
         <div id='four'>东滨有山|山上有黉|风云变幻|学子无双 <br>乾坤转动|大潮滂滂|斗转星移|群英堂堂</div>
-        <router-link id='vote' to='/vote'>
+        <router-link id='vote' to='/about'>
             <div id='vote-text'>
                 参与投票
             </div>
@@ -63,7 +62,6 @@ export default{
     width: 95%;
     height: 56.4%;
     background: rgba(0, 0, 0, 0);
-    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.16);
     opacity: 0.27;
     left: 2.5%;
     top: -5%
@@ -114,6 +112,8 @@ export default{
     opacity: 0.8;
     margin: 0 auto;
     top:60.74%;
+    min-width: 560px;
+    left: 1%;
   }
   #vote{
     position: relative;
@@ -128,13 +128,14 @@ export default{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 476.2px;
   }
   #vote-text{
     position: absolute;
     margin: 0 auto;
     width: 50%;
     height: 80%;
-    font-size: 2vw;
+    font-size: max(2vw,38px);
     font-family: FangSong;
     font-weight: 400;
     line-height: 56px;
@@ -150,12 +151,12 @@ export default{
     border: 1px solid #FFFFFF;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     opacity: 1;
-    /* left: 40%; */
     margin: 0 auto;
     top: 64%;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 476.2px;
   }
   #review-text{
     position: absolute;
@@ -169,11 +170,13 @@ export default{
     color: #FFFFFF;
     opacity: 1;
     text-align: center;
+    font-size: max(2vw,38px);
   }
   .small_cloud{
       position: absolute;
       width: 8.435%;
       height: 5.755%;
+      min-width: 176px;
   }
   #left_small{
       top: 73%;
@@ -185,7 +188,7 @@ export default{
       transform: rotateY(180deg);
   }
   #identity{
-      position: absolute;
+    position: absolute;
     width: 14.75%;
     height: 4.26%;
     font-family: Segoe UI;

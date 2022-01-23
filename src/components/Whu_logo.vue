@@ -10,5 +10,7 @@ export default ({
 </script>
 
 <style>
-
+ #whu{
+     min-width: 1396px;
+ }
 </style>
