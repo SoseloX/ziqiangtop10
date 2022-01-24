@@ -4,19 +4,26 @@
         <img src="../assets/home_text.png" alt="" id='home_text'>       
         <img src="../assets/big_cloud.png" alt="" class="big_cloud" id='left_big'>
         <img src="../assets/big_cloud.png" alt="" class="big_cloud" id='right_big'>
-        <div id='four'>东滨有山|山上有黉|风云变幻|学子无双 <br>乾坤转动|大潮滂滂|斗转星移|群英堂堂</div>
-        <router-link id='vote' to='/about'>
-            <div id='vote-text'>
-                参与投票
+        <div class="home_main">
+          <div id='four'>东滨有山|山上有黉|风云变幻|学子无双 <br>乾坤转动|大潮滂滂|斗转星移|群英堂堂</div>
+          <div id="main_body">
+            <img src="../assets/small_cloud.png" alt="" class="small_cloud" id='left_small'>
+            <div id="home_button">
+              <router-link id='vote' to='/about'>
+                  <div id='vote-text'>
+                      参与投票
+                  </div>
+              </router-link>
+              <router-link id='review' to='/review'>
+                  <div id='review-text'>
+                      十大回顾
+                  </div>
+              </router-link>
             </div>
-        </router-link>
-        <router-link id='review' to='/review'>
-            <div id='review-text'>
-                十大回顾
-            </div>
-        </router-link>
-        <img src="../assets/small_cloud.png" alt="" class="small_cloud" id='left_small'>
-        <img src="../assets/small_cloud.png" alt="" class="small_cloud" id='right_small'>
+            <img src="../assets/small_cloud.png" alt="" class="small_cloud" id='right_small'>
+          </div>
+          <div id='main_footer'><img src="../assets/ziqianglogo.png" alt="" id='ziqiang'></div>
+        </div>
         <div id='identity'>
             Copyright@ziqiang.studio 2017
         </div>
@@ -98,10 +105,19 @@ export default{
     top: 7.22%;
     text-align: center;
   }
+  .home_main{
+    position: relative;
+    top: 60%;
+    width: 50%;
+    height: 40.3%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   #four{
     position: relative;
-    width: 26%;
-    height: 9.16%;
+    height: 24%;
     font-size: 1.3vw;
     font-family: FangSong;
     font-weight: 400;
@@ -111,20 +127,30 @@ export default{
     letter-spacing: 0.2rem;
     opacity: 0.8;
     margin: 0 auto;
-    top:60.74%;
-    min-width: 560px;
-    left: 1%;
+  }
+  #main_body{
+    display: flex;
+    height: 36%;
+  }
+  .small_cloud{
+    width: 25%;
+    height: 55%;
+  }
+  #home_button{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   #vote{
     position: relative;
-    width: 24.7%;
-    height: 6.65%;
+    height: 40%;
+    width: 100%;
     background: #F3F3F3;
     border: 3px solid #000000;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
     opacity: 1;
     margin: 0 auto;
-    top: 63%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,14 +171,12 @@ export default{
   }
   #review{
     position: relative;
-    width: 24.7%;
-    height: 6.65%;
+    width: 100%;
+    height: 40%;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #FFFFFF;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    opacity: 1;
     margin: 0 auto;
-    top: 64%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,20 +196,21 @@ export default{
     text-align: center;
     font-size: max(2vw,38px);
   }
-  .small_cloud{
-      position: absolute;
-      width: 8.435%;
-      height: 5.755%;
-      min-width: 176px;
-  }
-  #left_small{
-      top: 73%;
-      left: 29.93%
-  }
   #right_small{
-      top: 73%;
-      right: 29.93%;
       transform: rotateY(180deg);
+  }
+  #main_footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 40%;
+  }
+  #ziqiang{
+    position: relative;
+    display: block;
+    margin: auto;
+    height: 21%;
+    width: 9%;
   }
   #identity{
     position: absolute;
