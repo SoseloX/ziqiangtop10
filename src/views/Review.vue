@@ -8,7 +8,8 @@
             <img src="../assets/review_text.png" id="review_text">
             <img src="../assets/big_cloud.png" id="review_big_cloud_right" class="big_cloud">
         </div>
-        <div id="name-year">2018</div>
+        <div id="name-year"><div id="name-year-div"><span id="name-year-span">2018</span></div></div>
+        <div id="name-line"></div>
         <div class="name-table">
             <name_box name="姓名1"></name_box>
             <name_box name="姓名2"></name_box>
@@ -67,5 +68,33 @@ export default {
     position: absolute;
     top: 50%;
     left: 29%;
+}
+#name-year {
+    position: absolute;
+    font-size: 48px;
+    top: 51%;
+    left: 18%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 8px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+#name-year-div {
+    transform: rotate(-45deg) translate(15px);
+}
+#name-year-span {
+    background-color: white;
+}
+#name-line {
+    position: absolute;
+    top: calc(51% + 96px);
+    left: calc(18% + 40px);
+    width: 2px;
+    height: 100px;
+    background-color: black;
 }
 </style>
