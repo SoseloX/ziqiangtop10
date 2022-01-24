@@ -8,28 +8,98 @@
             <img src="../assets/review_text.png" id="review_text">
             <img src="../assets/big_cloud.png" id="review_big_cloud_right" class="big_cloud">
         </div>
-        <div id="name-year"><div id="name-year-div"><span id="name-year-span">2018</span></div></div>
-        <div id="name-line"></div>
-        <div class="name-table">
-            <name_box name="姓名1"></name_box>
-            <name_box name="姓名2"></name_box>
-            <name_box name="姓名3"></name_box>
-            <name_box name="姓名4"></name_box>
-            <name_box name="姓名5"></name_box>
-            <name_box name="姓名6"></name_box>
-            <name_box name="姓名7"></name_box>
-            <name_box name="姓名8"></name_box>
-            <name_box name="姓名9"></name_box>
-            <name_box name="姓名A"></name_box>
+        <div id="review_wrapper" ref="scroll" >
+            <div id="review_content">
+                <div id="review_year_1">
+                    <div id="name-line"></div>
+                    <div id="name-year"><div id="name-year-div"><span id="name-year-span">2018</span></div></div>
+                    <div class="name-table">
+                        <name_box name="姓名1"></name_box>
+                        <name_box name="姓名2"></name_box>
+                        <name_box name="姓名3"></name_box>
+                        <name_box name="姓名4"></name_box>
+                        <name_box name="姓名5"></name_box>
+                        <name_box name="姓名6"></name_box>
+                        <name_box name="姓名7"></name_box>
+                        <name_box name="姓名8"></name_box>
+                        <name_box name="姓名9"></name_box>
+                        <name_box name="姓名A"></name_box>
+                    </div>
+                </div>
+                <div id="review_year_2">
+                    <div id="name-line"></div>
+                    <div id="name-year"><div id="name-year-div"><span id="name-year-span">2019</span></div></div>
+                    <div class="name-table">
+                        <name_box name="姓名1"></name_box>
+                        <name_box name="姓名2"></name_box>
+                        <name_box name="姓名3"></name_box>
+                        <name_box name="姓名4"></name_box>
+                        <name_box name="姓名5"></name_box>
+                        <name_box name="姓名6"></name_box>
+                        <name_box name="姓名7"></name_box>
+                        <name_box name="姓名8"></name_box>
+                        <name_box name="姓名9"></name_box>
+                        <name_box name="姓名A"></name_box>
+                    </div>
+                </div>
+                <div id="review_year_3">
+                    <div id="name-line"></div>
+                    <div id="name-year"><div id="name-year-div"><span id="name-year-span">2020</span></div></div>
+                    <div class="name-table">
+                        <name_box name="姓名1"></name_box>
+                        <name_box name="姓名2"></name_box>
+                        <name_box name="姓名3"></name_box>
+                        <name_box name="姓名4"></name_box>
+                        <name_box name="姓名5"></name_box>
+                        <name_box name="姓名6"></name_box>
+                        <name_box name="姓名7"></name_box>
+                        <name_box name="姓名8"></name_box>
+                        <name_box name="姓名9"></name_box>
+                        <name_box name="姓名A"></name_box>
+                    </div>
+                </div>
+                <div id="review_year_4">
+                    <div id="name-line"></div>
+                    <div id="name-year"><div id="name-year-div"><span id="name-year-span">2021</span></div></div>
+                    <div class="name-table">
+                        <name_box name="姓名1"></name_box>
+                        <name_box name="姓名2"></name_box>
+                        <name_box name="姓名3"></name_box>
+                        <name_box name="姓名4"></name_box>
+                        <name_box name="姓名5"></name_box>
+                        <name_box name="姓名6"></name_box>
+                        <name_box name="姓名7"></name_box>
+                        <name_box name="姓名8"></name_box>
+                        <name_box name="姓名9"></name_box>
+                        <name_box name="姓名A"></name_box>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import BScroll from '@better-scroll/core'
+import MouseWheel from '@better-scroll/mouse-wheel'
 import name_box from '../components/name_box'
+BScroll.use(MouseWheel)
 
 export default {
     name: "Review",
+    mounted() {
+        this.init()
+    },
+    methods: {
+        init(){
+            this.bs = new BScroll(this.$refs.scroll, {
+                probeType: 4,
+                scrollY: true,
+                click: true,
+                mouseWheel: true
+            })
+        }
+    },
     components: {
         name_box
     }
@@ -55,25 +125,40 @@ export default {
 #review_big_cloud_right {
     left: 71%;
 }
-.name {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    top: 15%;
-    left: 5%;
-}
 .name-table {
-    display: grid;
-    grid-template-columns: repeat(5, 27%);
     position: absolute;
-    top: 50%;
-    left: 29%;
+    left: 20%;
+    display: grid;
+    grid-column-gap: 5%;
+    grid-row-gap: 15%;
+    grid-template-columns: repeat(5, 10vw);
+}
+#review_wrapper{
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    top: 40%;
+    left: 15%;
+    overflow: hidden;
+}
+#review_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 440%;
+}
+#review_year_1, #review_year_2, #review_year_3, #review_year_4{
+    display: flex;
+    width: 100%;
+    height: 45%;
+    align-items: center;
+    justify-content: space-between;
 }
 #name-year {
-    position: absolute;
+    position: relative;
+    top: -35px;
+    left: 20px;
     font-size: 48px;
-    top: 51%;
-    left: 18%;
     width: 80px;
     height: 80px;
     line-height: 80px;
@@ -91,10 +176,9 @@ export default {
 }
 #name-line {
     position: absolute;
-    top: calc(51% + 96px);
-    left: calc(18% + 40px);
+    left: 60px;
     width: 2px;
-    height: 100px;
+    height: 240px;
     background-color: black;
 }
 </style>

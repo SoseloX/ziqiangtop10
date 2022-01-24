@@ -19,6 +19,5 @@ export default {
     box-shadow: inset 0px 0px 5px 1px #AAA, 1px 1px 5px 1px #AAA;
     font-size: 28px;
     padding: 15px;
-    margin: 15px;
 }
 </style>
