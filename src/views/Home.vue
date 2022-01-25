@@ -131,21 +131,25 @@ export default{
   #main_body{
     display: flex;
     height: 36%;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .small_cloud{
-    width: 25%;
-    height: 55%;
+    width: 20%;
+    height: 50%;
+    position: relative;
   }
   #home_button{
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    position: relative;
   }
   #vote{
     position: relative;
     height: 40%;
-    width: 100%;
+    width: 80%;
     background: #F3F3F3;
     border: 3px solid #000000;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
@@ -171,7 +175,7 @@ export default{
   }
   #review{
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 40%;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid #FFFFFF;
