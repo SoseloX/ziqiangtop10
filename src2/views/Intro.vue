@@ -99,33 +99,33 @@ export default {
 
 <!--
 RECT Template:
-#id { position: absolute; left: 0px; top: 0px; width: 1920px; height: 96px; opacity: 100%; background-color: #863232FF; border: 1px solid #707070FF; }
+#id { position: absolute; left: 0px; top: 0px; width: 1920px; height: 96px; opacity: 1; background-color: #863232FF; border: 1px solid #707070FF; }
 
 IMAGE Template:
-#id { position: absolute; left: 0px; top: 0px; width: 1920px; height: 96px; opacity: 100%; }
+#id { position: absolute; left: 0px; top: 0px; width: 1920px; height: 96px; opacity: 1; }
 
 TEXT Template:
-#id { position: absolute; left: 0px; top: 0px; width: 1920px; height: 96px; opacity: 100%; font-family: Segoe UI; font-weight: bold; align: left; color: #000000FF; font-size: 36px; letter-spacing: 0px; line-height: 43px; }
+#id { position: absolute; left: 0px; top: 0px; width: 1920px; height: 96px; opacity: 1; font-family: Segoe UI; font-weight: bold; text-align: left; color: #000000FF; font-size: 36px; letter-spacing: 0px; line-height: 43px; }
 -->
 <style>
 .screen { position: absolute; left: 0px; top: 0px; width: 100%; height: 112.5%; overflow: hidden; }
-#dc5c78 { position: absolute; left: 0px; top: 0px; width: 1920px; height: 96px; opacity: 100%; background-color: #863232FF; border: 1pt solid #707070FF; }
-#cda958 { position: absolute; left: 60px; top: 16px; width: 183px; height: 58px; opacity: 100%; }
-#f0bba1 { position: absolute; left: 624px; top: 21px; width: 176px; height: 62px; opacity: 100%; font-family: Segoe UI; font-weight: bold; align: left; color: #F9F9F9FF; font-size: 44px; letter-spacing: 0px; line-height: 53px; }
-#d1f42d { position: absolute; left: 912px; top: 21px; width: 88px; height: 62px; opacity: 100%; font-family: Segoe UI; font-weight: normal; align: left; color: #F9F9F9FF; font-size: 44px; letter-spacing: 0px; line-height: 53px; }
-#ba0317 { position: absolute; left: 1104px; top: 21px; width: 176px; height: 62px; opacity: 100%; font-family: Segoe UI; font-weight: normal; align: left; color: #F9F9F9FF; font-size: 44px; letter-spacing: 0px; line-height: 53px; }
-#db1683 { position: absolute; left: 140px; top: 165px; width: 360px; height: 103px; opacity: 100%; font-family: Segoe UI; font-weight: bold; align: left; color: #000000FF; font-size: 36px; letter-spacing: 0px; line-height: 43px; }
-#c8cc73 { position: absolute; left: 43px; top: 308.16px; width: 672px; height: 660px; opacity: 100%; font-family: Segoe UI; font-weight: normal; align: left; color: #000000FF; font-size: 24px; letter-spacing: 0px; line-height: 29px; }
-#cb55dd { position: absolute; left: 553px; top: 96px; width: 815px; height: 611px; opacity: 100%; }
-#d2ea43 { position: absolute; left: 896px; top: 351px; width: 120px; height: 168px; opacity: 100%; font-family: 草檀斋毛泽东字体; font-weight: normal; align: left; color: #000000FF; font-size: 120px; letter-spacing: 0px; line-height: 144px; }
-#c28ad0 { position: absolute; left: 900px; top: 537px; width: 120px; height: 168px; opacity: 100%; font-family: 草檀斋毛泽东字体; font-weight: normal; align: left; color: #000000FF; font-size: 120px; letter-spacing: 0px; line-height: 144px; }
-#e7c07e { position: absolute; left: 910px; top: 770px; width: 100px; height: 140px; opacity: 100%; font-family: 草檀斋毛泽东字体; font-weight: normal; align: left; color: #000000FF; font-size: 100px; letter-spacing: 0px; line-height: 120px; }
-#e1b755 { position: absolute; left: 910px; top: 937px; width: 100px; height: 140px; opacity: 100%; font-family: 草檀斋毛泽东字体; font-weight: normal; align: left; color: #000000FF; font-size: 100px; letter-spacing: 0px; line-height: 120px; }
-#cd151e { position: absolute; left: 1329px; top: 165px; width: 366px; height: 103px; opacity: 100%; font-family: Segoe UI; font-weight: bold; align: left; color: #000000FF; font-size: 36px; letter-spacing: 0px; line-height: 43px; }
-#d116b0 { position: absolute; left: 1222px; top: 329px; width: auto; height: auto; opacity: 100%; font-family: Segoe UI; font-weight: normal; align: left; color: #000000FF; font-size: 24px; letter-spacing: 0px; line-height: 29px; }
-#b9df74 { position: absolute; left: 25px; top: 963px; width: 483px; height: 272px; opacity: 100%; background-color: #D8D8D8FF; border: 1px solid #707070FF; }
-#a08b70 { position: absolute; left: 0px; top: 1267px; width: 1920px; height: 797px; opacity: 20%; background-color: #FFFFFFFF; border: 1px solid #707070FF; }
-#c4227a { position: absolute; left: 63px; top: 1290px; width: 1842px; height: 734px; opacity: 100%; font-family: Segoe UI; font-weight: normal; align: left; color: #6F1D1DFF; font-size: 25px; letter-spacing: 0px; line-height: 30px; }
-#d6d1be { position: absolute; left: 0px; top: 2064px; width: 1920px; height: 96px; opacity: 100%; background-color: #863232FF; border: 1px solid #707070FF; }
-#c99048 { position: absolute; left: 830px; top: 2082px; width: auto; height: auto; opacity: 100%; font-family: Segoe UI; font-weight: normal; align: left; color: #F9F9F9FF; font-size: 28px; letter-spacing: 0px; line-height: 34px; }
+#dc5c78 { position: absolute; left: 0px; top: 0px; width: 1920px; height: 96px; opacity: 1; background-color: #863232FF; border: 1pt solid #707070FF; }
+#cda958 { position: absolute; left: 60px; top: 16px; width: 183px; height: 58px; opacity: 1; }
+#f0bba1 { position: absolute; left: 624px; top: 21px; width: 176px; height: 62px; opacity: 1; font-family: Segoe UI; font-weight: bold; text-align: left; color: #F9F9F9FF; font-size: 44px; letter-spacing: 0px; line-height: 53px; }
+#d1f42d { position: absolute; left: 912px; top: 21px; width: 88px; height: 62px; opacity: 1; font-family: Segoe UI; font-weight: normal; text-align: left; color: #F9F9F9FF; font-size: 44px; letter-spacing: 0px; line-height: 53px; }
+#ba0317 { position: absolute; left: 1104px; top: 21px; width: 176px; height: 62px; opacity: 1; font-family: Segoe UI; font-weight: normal; text-align: left; color: #F9F9F9FF; font-size: 44px; letter-spacing: 0px; line-height: 53px; }
+#db1683 { position: absolute; left: 140px; top: 165px; width: 360px; height: 103px; opacity: 1; font-family: Segoe UI; font-weight: bold; text-align: left; color: #000000FF; font-size: 36px; letter-spacing: 0px; line-height: 43px; }
+#c8cc73 { position: absolute; left: 43px; top: 308.16px; width: 672px; height: 660px; opacity: 1; font-family: Segoe UI; font-weight: normal; text-align: left; color: #000000FF; font-size: 24px; letter-spacing: 0px; line-height: 29px; }
+#cb55dd { position: absolute; left: 553px; top: 96px; width: 815px; height: 611px; opacity: 1; }
+#d2ea43 { position: absolute; left: 896px; top: 351px; width: 120px; height: 168px; opacity: 1; font-family: 草檀斋毛泽东字体; font-weight: normal; text-align: left; color: #000000FF; font-size: 120px; letter-spacing: 0px; line-height: 144px; }
+#c28ad0 { position: absolute; left: 900px; top: 537px; width: 120px; height: 168px; opacity: 1; font-family: 草檀斋毛泽东字体; font-weight: normal; text-align: left; color: #000000FF; font-size: 120px; letter-spacing: 0px; line-height: 144px; }
+#e7c07e { position: absolute; left: 910px; top: 770px; width: 100px; height: 140px; opacity: 1; font-family: 草檀斋毛泽东字体; font-weight: normal; text-align: left; color: #000000FF; font-size: 100px; letter-spacing: 0px; line-height: 120px; }
+#e1b755 { position: absolute; left: 910px; top: 937px; width: 100px; height: 140px; opacity: 1; font-family: 草檀斋毛泽东字体; font-weight: normal; text-align: left; color: #000000FF; font-size: 100px; letter-spacing: 0px; line-height: 120px; }
+#cd151e { position: absolute; left: 1329px; top: 165px; width: 366px; height: 103px; opacity: 1; font-family: Segoe UI; font-weight: bold; text-align: left; color: #000000FF; font-size: 36px; letter-spacing: 0px; line-height: 43px; }
+#d116b0 { position: absolute; left: 1222px; top: 329px; width: auto; height: auto; opacity: 1; font-family: Segoe UI; font-weight: normal; text-align: left; color: #000000FF; font-size: 24px; letter-spacing: 0px; line-height: 29px; }
+#b9df74 { position: absolute; left: 25px; top: 963px; width: 483px; height: 272px; opacity: 1; background-color: #D8D8D8FF; border: 1px solid #707070FF; }
+#a08b70 { position: absolute; left: 0px; top: 1267px; width: 1920px; height: 797px; opacity: 0.2; background-color: #FFFFFFFF; border: 1px solid #707070FF; }
+#c4227a { position: absolute; left: 63px; top: 1290px; width: 1842px; height: 734px; opacity: 1; font-family: Segoe UI; font-weight: normal; text-align: left; color: #6F1D1DFF; font-size: 25px; letter-spacing: 0px; line-height: 30px; }
+#d6d1be { position: absolute; left: 0px; top: 2064px; width: 1920px; height: 96px; opacity: 1; background-color: #863232FF; border: 1px solid #707070FF; }
+#c99048 { position: absolute; left: 830px; top: 2082px; width: auto; height: auto; opacity: 1; font-family: Segoe UI; font-weight: normal; text-align: left; color: #F9F9F9FF; font-size: 28px; letter-spacing: 0px; line-height: 34px; }
 </style>
